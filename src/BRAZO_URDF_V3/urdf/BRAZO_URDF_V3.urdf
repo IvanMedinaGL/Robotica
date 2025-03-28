@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="BRAZO_URDF_V3">
+  <link
+    name="eslabon base">
+    <inertial>
+      <origin
+        xyz="-0.00882290273067091 -6.93889390390723E-18 0.0269217585658854"
+        rpy="0 0 0" />
+      <mass
+        value="0.335288318064784" />
+      <inertia
+        ixx="0.000301882076882298"
+        ixy="-1.95313585415809E-20"
+        ixz="1.52482939379535E-05"
+        iyy="0.000465085576680723"
+        iyz="-1.64711535222717E-20"
+        izz="0.000536871509489116" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/eslabon base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/eslabon base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ESLABON ROTACION">
+    <inertial>
+      <origin
+        xyz="0 0 0.0630288606936914"
+        rpy="0 0 0" />
+      <mass
+        value="0.00792631563306555" />
+      <inertia
+        ixx="9.54333718723177E-07"
+        ixy="-1.15643347021204E-23"
+        ixz="3.03972941529184E-23"
+        iyy="9.71075618241566E-07"
+        iyz="-4.22886018114194E-24"
+        izz="7.97669672938977E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/ESLABON ROTACION.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/ESLABON ROTACION.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ESLABON ROTACION"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="eslabon base" />
+    <child
+      link="ESLABON ROTACION" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0.18"
+      velocity="10.472" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="ESLABON DE BRAZO 1">
+    <inertial>
+      <origin
+        xyz="-0.000966415503477563 -0.0190572854817525 0.00105821743021272"
+        rpy="0 0 0" />
+      <mass
+        value="0.0485744385999758" />
+      <inertia
+        ixx="1.8593970179839E-05"
+        ixy="-5.25312085428343E-07"
+        ixz="-1.31826405070508E-07"
+        iyy="3.2725311613632E-06"
+        iyz="1.54876095792427E-06"
+        izz="1.9702766411215E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/ESLABON DE BRAZO 1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/ESLABON DE BRAZO 1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ESLABON DE BRAZO 1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.075"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="ESLABON ROTACION" />
+    <child
+      link="ESLABON DE BRAZO 1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0.18"
+      velocity="10.472" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="ESLABON DE BRAZO 2">
+    <inertial>
+      <origin
+        xyz="0.000301769617941816 0.0299293457414871 -0.000556617692094648"
+        rpy="0 0 0" />
+      <mass
+        value="0.028486686920439" />
+      <inertia
+        ixx="1.51704938602305E-05"
+        ixy="-1.96328794398074E-08"
+        ixz="-5.85124985696709E-08"
+        iyy="1.87208865570457E-06"
+        iyz="-2.12186863467087E-07"
+        izz="1.59205662534004E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/ESLABON DE BRAZO 2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/ESLABON DE BRAZO 2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ESLABON DE BRAZO 2"
+    type="revolute">
+    <origin
+      xyz="0 -0.0599999999999996 0"
+      rpy="0 0 -1.5707963267949" />
+    <parent
+      link="ESLABON DE BRAZO 1" />
+    <child
+      link="ESLABON DE BRAZO 2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="3.1416"
+      effort="0.18"
+      velocity="10.472" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="ESLABON BASE GRIPPER">
+    <inertial>
+      <origin
+        xyz="-0.00104217230985984 3.44390048610879E-05 0.0812317135361134"
+        rpy="0 0 0" />
+      <mass
+        value="0.00437816277547282" />
+      <inertia
+        ixx="3.8534696570901E-07"
+        ixy="4.83674876889538E-10"
+        ixz="5.56015541469149E-08"
+        iyy="3.84305888855166E-07"
+        iyz="-1.8373758114991E-09"
+        izz="1.93040520057411E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/ESLABON BASE GRIPPER.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/ESLABON BASE GRIPPER.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ESLABON BASE GRIPPER"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="ESLABON DE BRAZO 2" />
+    <child
+      link="ESLABON BASE GRIPPER" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0.18"
+      velocity="10.472" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="GRIPPER_IZQUIERDO">
+    <inertial>
+      <origin
+        xyz="0.00167592221045528 -0.00885112424283893 -0.00127020520761781"
+        rpy="0 0 0" />
+      <mass
+        value="0.000226797486557845" />
+      <inertia
+        ixx="1.2430068037959E-08"
+        ixy="-1.37850376202537E-09"
+        ixz="-2.15053622842908E-22"
+        iyy="1.44598497176333E-09"
+        iyz="-3.96672535465344E-22"
+        izz="1.35570478126575E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/GRIPPER_IZQUIERDO.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/GRIPPER_IZQUIERDO.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="GRIPPER_IZQUIERDO"
+    type="revolute">
+    <origin
+      xyz="0 -0.0036696 0.099465"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="ESLABON BASE GRIPPER" />
+    <child
+      link="GRIPPER_IZQUIERDO" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="0"
+      effort="0.18"
+      velocity="10.472" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="GRIPPER DERECHO">
+    <inertial>
+      <origin
+        xyz="0.0017313 -0.0088405 0.0012702"
+        rpy="0 0 0" />
+      <mass
+        value="0.0002268" />
+      <inertia
+        ixx="1.2447E-08"
+        ixy="-1.3096E-09"
+        ixz="-1.1869E-22"
+        iyy="1.4292E-09"
+        iyz="6.2258E-23"
+        izz="1.3557E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/GRIPPER DERECHO.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BRAZO_URDF_V3/meshes/GRIPPER DERECHO.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="GRIPPER DERECHO"
+    type="revolute">
+    <origin
+      xyz="0 0.00395044296636456 0.0994651136233699"
+      rpy="-1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="ESLABON BASE GRIPPER" />
+    <child
+      link="GRIPPER DERECHO" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.5708"
+      effort="0.18"
+      velocity="10.472" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+</robot>

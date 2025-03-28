@@ -1,0 +1,69 @@
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage[utf8]{inputenc}   % Codificación de entrada
+\usepackage[T1]{fontenc}      % Codificación de fuente
+\usepackage[spanish,es-tabla]{babel}   % Idioma español
+\usepackage{lmodern}          % Fuente moderna
+\usepackage{amsmath, amssymb} % Matemáticas y símbolos
+\usepackage{graphicx} 		  % Gráficos e imágenes
+\graphicspath{{img/}{tablas/}{portada/}}  % Las imágenes se buscarán en la carpeta "img"
+\usepackage{longtable}      % Para tablas que se extienden en varias páginas
+\usepackage{tabularx}	% Tablas avanzadas
+\usepackage{threeparttable}
+\usepackage{hyperref}	% Hipervínculos
+
+%-------------------------------------------
+% Otros paquetes útiles (personaliza según tus necesidades)
+%-------------------------------------------
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{setspace}
+
+%-------------------------------------------
+% Comandos personalizados
+\renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\appendixname}{Anexos}
+\definecolor{colorreferences}{RGB}{48,134,3}
+
+% Metadatos del PDF
+\hypersetup{
+	unicode=true,
+	hidelinks,
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=black,          % color of internal links (change box color with linkbordercolor)
+	citecolor=colorreferences,        % color of links to bibliography
+	filecolor=magenta,      % color of file links
+	urlcolor=blue,           % color of external links
+	linkbordercolor={0 0 0}
+}
+%-------------------------------------------
+% Inicio del documento
+%-------------------------------------------
+\begin{document}
+
+% Aquí se encuentra el archivo con la portada
+\input{portada/portada}
+
+%	Es innecesario poner el índice porque ya aparece en los marcadores del PDF
+%\tableofcontents
+
+% Ejemplo de inclusión de una sección (por ejemplo, "introduccion.tex" debe estar en la carpeta "secciones" y se recomienda no usar carácteres especiales (tilde) o espacios)
+\input{secciones/introduccion}
+\input{secciones/imagenes}
+\input{secciones/tablas}
+\input{secciones/ecuaciones}
+\input{secciones/conclusion}
+\input{secciones/prueba}
+\input{seccion/nose}
+\input{seccion/dos}
+\input{seccion/tres}
+
+%-------------------------------------------
+% Bibliografía
+%-------------------------------------------
+\bibliographystyle{IEEEtran}  % Estilo de bibliografía IEEE
+% La bibliografía se tomará del archivo "fuentes.bib"
+%\newpage
+\bibliography{fuentes}
+	
+\end{document}
