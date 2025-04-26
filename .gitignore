@@ -83,3 +83,7 @@ dist/
 *.nav
 *.snm
 *.vrb
+
+# Archivos de ROS
+log/
+install/
