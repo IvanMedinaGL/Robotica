@@ -6,7 +6,6 @@
   - [Configura el entorno de ROS 2](#configura-el-entorno-de-ros-2)
   - [Terminado](#terminado)
 
--> Para instalar MoveIt 2, ve a [Instalación de MoveIt 2](Instalacion-MoveIt.md).
 # Instalación de ROS y Gazebo
 Para configurar ROS, puedes seguir los pasos que aparecen en la [página ofical de ROS](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html), pero aquí lo explicaré para los fines de la clase. Recuerda observar bien si aparece un error.
 
